@@ -24,8 +24,8 @@ Create A Project Robot Account
     ${permission_count}=  Create Dictionary
     ${total}=  Set Variable  0
     IF  '${first_resource}' == 'all'
-        Set To Dictionary  ${permission_count}  all= 73
-        ${total}=  Set Variable  73
+        Set To Dictionary  ${permission_count}  all= 69
+        ${total}=  Set Variable  69
         Retry Element Click  //span[text()='Select all']
     ELSE
         FOR  ${item}  IN  @{resources}
