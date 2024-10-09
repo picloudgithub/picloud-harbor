@@ -669,7 +669,7 @@ Create Schedules For Job Service Dashboard Schedules
     Add A Tag Retention Rule
     Set Tag Retention Policy Schedule  ${schedule_type}  ${schedule_cron}
     # Create a preheat policy triggered by schedule
-    Create An New Distribution  Dragonfly  ${distribution_name}  ${distribution_endpoint}
+    Create An New Distribution  Dragonfly  ${distribution_name}  ${distribution_endpoint}  ${DRAGONFLY_AUTH_TOKEN}
     Go Into Project  ${project_name}
     Create An New P2P Preheat Policy  ${p2p_policy_name}  ${distribution_name}  **  **  Scheduled  ${schedule_type}  ${schedule_cron}
     # Create a replication policy triggered by schedule
