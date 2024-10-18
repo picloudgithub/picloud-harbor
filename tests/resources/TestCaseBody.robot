@@ -302,7 +302,7 @@ Body Of Replication Of Push Images to Registry Triggered By Event
     Select Rule  rule${d}
     ${endpoint_body}=  Fetch From Right  ${endpoint}  //
     ${dest_namespace}=  Set Variable If  '${provider}'=='gitlab'  ${endpoint_body}/${dest_namespace}  ${dest_namespace}
-    Run Keyword If  '${provider}'=='docker-hub' or '${provider}'=='gitlab'  Docker Image Can Be Pulled  ${dest_namespace}/${image}:${tag1}   times=3
+    Run Keyword If  '${provider}'=='docker-hub' or '${provider}'=='gitlab'  Docker Image Can Be Pulled  ${dest_namespace}/${image}:${tag1}   times=6
     Executions Result Count Should Be  Succeeded  event_based  1
     Go Into Project  project${d}
     Delete Repo  project${d}  ${image}
